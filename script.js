@@ -1,7 +1,6 @@
 
 const characterCard = ({name, species, status, image}) => {
     
-    /* const {name, species, status, image} = characterData */
     
     
     
@@ -40,31 +39,7 @@ const domFromData = (data, rootElement) => {
 
     rootElement.insertAdjacentHTML("beforeend", charactersComponent(data.results))
 
-    
-    /* if (data.info.prev !== null) {rootElement.insertAdjacentHTML("beforeend", buttonComponent("prev"))
-        const prevButtonElement = document.querySelector("button.prev")
-        prevButtonElement.addEventListener("click", () => {
-            fetch(data.info.prev)
-            .then(res => res.json())
-            .then(newData => {
-                domFromData(newData, rootElement)
-            })
-            
-        })
-    }
-    
-    
-   if (data.info.next !== null) {rootElement.insertAdjacentHTML("beforeend", buttonComponent("next"))
-        const nextButtonElement = document.querySelector("button.next")
-        nextButtonElement.addEventListener("click", () => {
-            fetch(data.info.next)
-            .then(res => res.json())
-            .then(newData => {
-                domFromData(newData, rootElement)
-            })
-            
-        })
-    } */
+   
 }
 
 
@@ -73,27 +48,6 @@ fetch ("https://rickandmortyapi.com/api/character")
 .then((data) => {
     console.log(data)
 
-    /* data.results.forEach(characterData => {
-        document.querySelector('#root').insertAdjacentHTML("beforeend", characterCard(characterData))
-    }); */
-    /* document.querySelector("#root").insertAdjacentHTML("beforeend", charactersComponent(data.results)) */
-
     domFromData(data, document.querySelector("#root"))
-    /* const nextButtonElement = document.querySelector("button")
-    nextButtonElement.addEventListener("click", () => {
-        fetch(data.info.next)
-        .then(res => res.json())
-        .then(newData => {
-            
-            domFromData(newData, document.querySelector("#root"))
-            const newNextButtonElement = document.querySelector("button")
-            newNextButtonElement.addEventListener("click", () => {
-                fetch(newData.info.next)
-                .then(res2 => res.json())
-                .then(newerData =>)
-            })
-        })
-
-        
-    }) */
+    
 })
