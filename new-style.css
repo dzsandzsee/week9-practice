@@ -1,0 +1,39 @@
+body #root .characters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 800px;
+  align-items: center;
+}
+body #root .characters .card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(27, 55, 55);
+  border: 4px solid rgb(47, 0, 255);
+  border-radius: 8px;
+  margin: 5px;
+  align-items: center;
+}
+body #root .characters .card h2 {
+  color: red;
+  margin: 2px;
+}
+body #root .characters .card h3.Human {
+  color: rgb(243, 231, 149);
+  margin: 2px;
+}
+body #root .characters .card h3.Alien {
+  color: rgb(17, 255, 0);
+  margin: 2px;
+}
+body #root .characters .card h4 {
+  color: yellow;
+  margin: 2px;
+}
+body #root .characters .card h4.Alive {
+  color: white;
+}
+body #root .characters .card h4.Dead {
+  color: black;
+}/*# sourceMappingURL=new-style.css.map */
